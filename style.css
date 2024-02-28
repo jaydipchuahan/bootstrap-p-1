@@ -1,0 +1,66 @@
+/* main Page */
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.vh100 {
+    height: 100vh;
+}
+
+.h200 {
+    height: 200px;
+}
+
+.Home {
+    margin-top: 60px;
+    width: 100%;
+    background-color: #ffff;
+    background-attachment: fixed;
+    background-image: url(https://www.wallpapertip.com/wmimgs/80-802123_fashion-clothing-background-hd.jpg);
+    background-position: center;
+    background-size: 100% 90%;
+    background-repeat: no-repeat;
+}
+
+.Home .brand-name {
+    text-shadow: 0 0 8px lightcoral,
+        0 0 10px lightcoral,
+        0 0 18px lightcoral;
+}
+
+
+.shop-btn:active{
+    background-color: red;
+    color: white;
+    border-color:red ;
+}
+.Explore-box {
+    transition: .4s all ease;
+    cursor: pointer;
+}
+
+.Explore-box:hover {
+    background-color: #FFD43B;
+}
+
+
+/* -----------T-Shirt & Shirt-------- */
+
+.h400{
+    height: 400px;
+}
+img{
+    aspect-ratio: 3/2;
+    object-fit: contain;
+}
+.home-btn{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}

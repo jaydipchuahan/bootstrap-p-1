@@ -13,7 +13,9 @@
 .h200 {
     height: 200px;
 }
-
+.h500{
+    height: 500px;
+}
 .Home {
     margin-top: 60px;
     width: 100%;
@@ -40,10 +42,13 @@
 .Explore-box {
     transition: .4s all ease;
     cursor: pointer;
+    border: 2px solid transparent;
+
 }
 
 .Explore-box:hover {
     background-color: #FFD43B;
+    border: 2px solid black;
 }
 
 
@@ -63,4 +68,11 @@ img{
     width: 40px;
     height: 40px;
     border-radius: 50%;
+}
+
+.img-slider{
+    background-size:80%;
+    height: 100%;
+    width: 50%;
+    padding: 20px;
 }

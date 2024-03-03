@@ -5,6 +5,9 @@
     padding: 0%;
     box-sizing: border-box;
 }
+body{
+    overflow-x: hidden;
+}
 
 .vh100 {
     height: 100vh;
@@ -13,9 +16,47 @@
 .h200 {
     height: 200px;
 }
-.h500{
+
+.h500 {
     height: 500px;
 }
+
+.menu {
+    overflow: hidden;
+    position: relative;
+}
+
+.menu:hover.menu::before {
+    top: 0;
+    transition: .3s;
+
+}
+
+.feed-left {
+    animation: load linear both ;
+    animation-timeline: view();
+    animation-range: entry 50% cover 30% ;
+    position: relative;
+}
+.feed-right {
+    animation: load-1 linear both ;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50% ;
+    position: relative;
+}
+
+.menu::before {
+    content: "";
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+    background-color: lightgray;
+    color: darkgrey;
+    border: 1px solid;
+}
+
 .Home {
     margin-top: 60px;
     width: 100%;
@@ -34,11 +75,12 @@
 }
 
 
-.shop-btn:active{
+.shop-btn:active {
     background-color: red;
     color: white;
-    border-color:red ;
+    border-color: red;
 }
+
 .Explore-box {
     transition: .4s all ease;
     cursor: pointer;
@@ -54,14 +96,16 @@
 
 /* -----------T-Shirt & Shirt-------- */
 
-.h400{
+.h400 {
     height: 400px;
 }
-img{
+
+img {
     aspect-ratio: 3/2;
     object-fit: contain;
 }
-.home-btn{
+
+.home-btn {
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -70,9 +114,70 @@ img{
     border-radius: 50%;
 }
 
-.img-slider{
-    background-size:80%;
+.img-slider {
+    background-size: 80%;
     height: 100%;
     width: 50%;
     padding: 20px;
+}
+
+@keyframes load {
+    0% {
+        opacity: 0;
+        left: -4%;
+    }
+
+    25% {
+        opacity: 25%;
+    }
+
+    50% {
+        opacity: 50%;
+    }
+
+    75% {
+        opacity: 75%;
+    }
+    100% {
+        left: 0;
+        opacity: 100%;
+    }
+}
+@keyframes load-1 {
+    0% {
+        opacity: 0;
+        right: -4%;
+    }
+
+    25% {
+        opacity: 25%;
+    }
+
+    50% {
+        opacity: 50%;
+    }
+
+    75% {
+        opacity: 75%;
+    }
+    100% {
+        right: 0;
+        opacity: 100%;
+    }
+}
+@keyframes load-in {
+    0% {
+        opacity: 0;
+    }
+    50%{
+        opacity: 50%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+.feed-in{
+    animation: load-in linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 30%;
 }
